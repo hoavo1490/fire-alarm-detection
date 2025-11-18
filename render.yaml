@@ -11,10 +11,3 @@ services:
         value: "1"
       - key: PYTHONPATH
         value: .
-
-staticSites:
-  - name: fire-alarm-frontend
-    plan: free
-    buildCommand: ""
-    publishPath: frontend
-    pullRequestPreviewsEnabled: true
