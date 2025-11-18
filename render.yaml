@@ -11,9 +11,12 @@ services:
         value: "1"
       - key: PYTHONPATH
         value: .
-staticSites:
-  - name: fire-alarm-frontend
+  - type: static
+    name: fire-alarm-frontend
     plan: free
     buildCommand: ""
-    publishPath: frontend
-    pullRequestPreviewsEnabled: true
+    staticPublishPath: frontend
+    autoDeploy: true
+    envVars:
+      - key: API_URL
+        value: https://fire-alarm-backend.onrender.com/api/detect
