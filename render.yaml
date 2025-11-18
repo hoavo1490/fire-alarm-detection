@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: fire-alarm-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    autoDeploy: true
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: PYTHONPATH
+        value: .
+staticSites:
+  - name: fire-alarm-frontend
+    plan: free
+    buildCommand: ""
+    publishPath: frontend
+    pullRequestPreviewsEnabled: true

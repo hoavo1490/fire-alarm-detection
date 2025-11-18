@@ -1,0 +1,103 @@
+:root {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #101828;
+  background-color: #f5f7fb;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #fff, #e7ecff);
+}
+
+.app-shell {
+  width: min(420px, 90vw);
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+button#toggle {
+  border: none;
+  padding: 14px 26px;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button#toggle:hover {
+  background: #1e4fc4;
+  transform: translateY(-1px);
+}
+
+button#toggle.listening {
+  background: #d97706;
+}
+
+.status {
+  margin-top: 12px;
+  font-weight: 500;
+  color: #475467;
+}
+
+.results {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.card .label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #667085;
+  letter-spacing: 0.05em;
+}
+
+.card .value {
+  font-size: 1.6rem;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.card .value.alert {
+  color: #dc2626;
+}
+
+footer {
+  text-align: center;
+  margin-top: 32px;
+  color: #98a2b3;
+  font-size: 0.8rem;
+}

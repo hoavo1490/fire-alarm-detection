@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Alarm Detector</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>Fire Alarm Detector</h1>
+    </header>
+
+    <section class="controls">
+      <button id="toggle" type="button">Start Listening</button>
+      <div class="status" id="status">Microphone idle</div>
+    </section>
+
+    <section class="results">
+      <h2>Latest Detection</h2>
+      <div class="card">
+        <div class="label">Alarm status</div>
+        <div class="value" id="alarm-state">Not listening</div>
+      </div>
+      <div class="card">
+        <div class="label">Model confidence</div>
+        <div class="value" id="score">0.00</div>
+      </div>
+    </section>
+
+    <footer>
+      <small>Powered by Design Thinking Gr 5.</small>
+    </footer>
+  </div>
+
+  <script type="module" src="/static/app.js"></script>
+</body>
+
+</html>
